@@ -18,7 +18,7 @@ This project demonstrates how to capture, analyze, and audit network traffic usi
 ### 1. Environment Setup
 I deployed a local web server instance using Apache2 on Kali Linux and created a mock unencrypted login form. I initiated a live packet capture on the Loopback (`lo`) interface to monitor localized traffic.
 
-*[INSERT SCREENSHOT 1 HERE: Your browser next to Wireshark capturing traffic]*
+![Setup](images/setup.png)
 
 ### 2. Traffic Isolation & Filtering
 After executing a mock login attempt, I utilized advanced Wireshark display syntax (`http.request.method == "POST"`) to filter out thousands of background packets and isolate the exact authentication payload.
