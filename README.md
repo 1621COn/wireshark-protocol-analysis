@@ -23,12 +23,12 @@ I deployed a local web server instance using Apache2 on Kali Linux and created a
 ### 2. Traffic Isolation & Filtering
 After executing a mock login attempt, I utilized advanced Wireshark display syntax (`http.request.method == "POST"`) to filter out thousands of background packets and isolate the exact authentication payload.
 
-*[INSERT SCREENSHOT 2 HERE: Wireshark showing the isolated green POST packet]*
+![Filtering](images/filter.png)
 
 ### 3. Deep Packet Inspection & Credential Extraction
 By inspecting the transport and application layer details of the isolated packet, I expanded the `HTML Form URL Encoded` section. Because the traffic lacked TLS encryption, the username and password were completely exposed in clear text.
 
-*[INSERT SCREENSHOT 3 HERE: The expanded view showing your text credentials]*
+[Credits](images/credits.png)
 
 ## Remediation & Conclusion
 This lab highlights the critical risk of utilizing unencrypted communication channels. Because Layer 7 HTTP traffic transfers payloads in clear text, any attacker executing a Man-in-the-Middle (MitM) attack could intercept sensitive data. 
